@@ -32,15 +32,62 @@ const alumnado : Alumno[] = [
 ] 
 
 // Obten los nombres (solo los nombres) de todos los alumnos
-function obtenerNombres(alumnos[]: Alumno){
+function obtenerNombres(alumnos: Alumno[]){
   return alumnos.map((alumno) => alumno.nombre)
 }
 
-const obtenerNombresV2= (alumnos: ALumno[]) => alumno.map( (alumno) => alumno.nombre)
+const obtenerNombresV2= (alumnos: Alumno[]) => alumnos.map( (alumno) => alumno.nombre)
+
+// Obtener la nota media de cada alumno
+
+function obtenerNotaMedia(alumnos: Alumno[]){
+  return alumnos.map((alumno) => {
+    let notaMedia: number = 0;
+    let contar: number = 0;
+    for (const nota of alumno.notas) {
+      notaMedia+=nota
+      contar++
+    }
+    return {nombre: alumno.nombre, media:notaMedia/contar}
+  })
+    
+}
+
+// Obtener la nota media más alta
+function obtenerNotaMasAlta(alumnos: Alumno[]){
+  let masAlta: number = 0
+  let nombre: string = ''
+  for (const alumno of obtenerNotaMedia(alumnos)){
+    if (alumno.media>masAlta){
+      masAlta = alumno.media
+      nombre = alumno.nombre
+    }
+  }
+  return {nombre: nombre, media: masAlta}
+}
 
 
+// Obtener la nota media global
 
-// ------ inicializar el ejercicio -----
+function obtenerNotaMediaGlobal(alumnos: Alumno[]){
+    let notaMedia: number = 0
+    let contar: number = 0
+  alumnos.map((alumno) => {
+    for (const nota of alumno.notas) {
+      notaMedia+=nota
+      contar++
+    }
+  })
+  return `La nota media global es de ${notaMedia/contar}`
+}
+// ------ finicializar el ejercicio -----
 //
 
+console.log("Ejer1, Nombres de los alumnos:")
 console.log(obtenerNombres(alumnado))
+console.log("Ejer2, Alumnos y sus notas medias:")
+console.log(obtenerNotaMedia(alumnado))
+console.log("Ejer3, Alumno con la nota más alta:")
+console.log(obtenerNotaMasAlta(alumnado))
+console.log("Ejer4, Nota media global:")
+console.log(obtenerNotaMediaGlobal(alumnado))
