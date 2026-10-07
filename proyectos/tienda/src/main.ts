@@ -11,6 +11,10 @@ import { byCategory } from "./exercises/s01-homework/ex03-by-category";
 import { priceOf } from "./exercises/s01-homework/ex04-price-of";
 import { canBuy } from "./exercises/s01-homework/ex05-can-buy";
 import { allInStock } from "./exercises/s01-homework/ex06-think";
+import { totalUnits } from "./exercises/s02-homework/ex01-total-units";
+import { cheapestAvailable } from "./exercises/s02-homework/ex02-cheapest-available";
+import { catalog } from "./exercises/s02-homework/ex03-catalog";
+import { summary } from "./exercises/s02-homework/ex04-summary";
 
 // mostrar todos los productos
 console.log("Catalogo de productos TechStore", products)
@@ -23,6 +27,7 @@ console.log("Primer Producto: ", first)
 
 // console.log("Precio del primer producto", products[0].price)
 
+// ----- S01-Homework ------
 //Ejercicio 1 tags
 console.log('ej01', tags(products))
 //Ejercicio 2 0 stock
@@ -45,3 +50,20 @@ console.log(
 )
 //Ejercicio 6 Piensa
 console.log('ej06', allInStock([]))
+
+
+// ------ S02-Homework ------
+//Ejercicio 1 Suma stock
+console.log('ej01', totalUnits(products), totalUnits([]))
+//Ejercicio 2 Comprovar disponibilidad
+const cheapest = cheapestAvailable(products)
+if (cheapest !== undefined) {
+  console.log('ej02', cheapest.name)
+}
+console.log('ej02', cheapestAvailable([]))
+//Ejercicio 3 Catalogo
+console.log('ej03', catalog(products))
+//Ejercicio 4 Resumen
+console.log('ej04', summary(products))
+console.log('ej04', summary([]))
+//Ejercicio 5 Piensa
