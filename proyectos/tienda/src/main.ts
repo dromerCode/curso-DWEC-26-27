@@ -67,3 +67,23 @@ console.log('ej03', catalog(products))
 console.log('ej04', summary(products))
 console.log('ej04', summary([]))
 //Ejercicio 5 Piensa
+
+
+// ------ S06 ------
+// Descomenta cada import según vayas haciendo los ejercicios.
+// import { uniqueTags, firstRepeated, inBoth } from './exercises/s06/a-set'
+// import { goalsByPlayer, topScorer, titlesByAuthor, capitalOf } from './exercises/s06/b-map'
+// import { addVat, applyToAll, createDiscount, sortMovies, byYear, byRatingDesc } from './exercises/s06/d-functions'
+// import { createTurnDispenser, createTrafficLight, createPasswordCheck } from './exercises/s06/e-closures'
+// import './exercises/s06/f-modules/grades/main'
+// import { describeFood, loginMessage } from './exercises/s06/g-unions'
+
+//Bloque A Set
+
+//Bloque B Map
+
+//Bloque D Funciones
+
+//Bloque E Closures
+
+//Bloque G Uniones
