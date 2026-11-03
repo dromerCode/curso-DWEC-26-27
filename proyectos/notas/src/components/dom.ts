@@ -9,4 +9,11 @@ export function getElement<T extends Element>(selector: string, type: new () => 
   return element
 }
 
+export function createTag(tag: string, text: string, classes: string[]): HTMLElement {
+  const element = document.createElement(tag)
+  element.textContent = text
+  element.classList.add(...classes)
+  return element
+}
+
 
