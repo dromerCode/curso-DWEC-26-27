@@ -1,5 +1,5 @@
 import { getElement, createTag } from './components/dom';
-import { mountFind } from './components/findComponent';
+import { mountFind1, mountFind2, mountFind3 } from './components/findComponent';
 import { createHr } from './components/hrComponent';
 import { mountClickCounter } from './utils/counter';
 
@@ -39,4 +39,8 @@ reset.addEventListener('click', () => {
 });
 
 divProducts.append(createHr());
-mountFind(divProducts);
+mountFind1(divProducts);
+divProducts.append(createHr());
+mountFind2(divProducts);
+divProducts.append(createHr());
+mountFind3(divProducts);
