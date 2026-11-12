@@ -1,4 +1,5 @@
 import {
+  createFooter,
   createList,
   createProductItem,
   createSearchInput,
@@ -73,3 +74,5 @@ searchInput.addEventListener('input', () => {
 
   paint(products.filter((p) => p.name.toLowerCase().includes(text)));
 });
+
+app.append(createFooter('Daniel Romero'));

@@ -36,8 +36,18 @@ export function createProductItem(product: Product): HTMLElement {
   const text = document.createElement('span');
   text.textContent = `${product.name} --- ${product.price.toFixed(2)} €`;
   const button = document.createElement('button');
+  const buttonFav = document.createElement('button');
   button.type = 'button';
   button.textContent = 'Borrar';
+  buttonFav.textContent = 'Favorite';
   item.append(text, button);
   return item;
+}
+
+export function createFooter(name: string): HTMLElement {
+  const footer = document.createElement('footer');
+  const date = new Date().toLocaleDateString();
+  const time = new Date().toLocaleTimeString();
+  footer.textContent = `${name} - ${date} - ${time}`;
+  return footer;
 }
