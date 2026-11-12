@@ -9,7 +9,7 @@ import {
   createTitle,
   getElement,
 } from './components/dom';
-import { initialGames } from './services/games';
+import { loadGames, saveGames } from './services/storage';
 import './style.css';
 import type { AppState } from './types/game';
 
@@ -22,7 +22,7 @@ const list = createList();
 app.append(createTitle('Mis juegos'), searchInput, form, counter, list);
 
 let state: AppState = {
-  games: initialGames,
+  games: loadGames(),
   search: '',
 };
 
@@ -41,6 +41,7 @@ function deleteGame(id: number): void {
     ...state,
     games: state.games.filter((g) => g.id !== id),
   };
+  saveGames(state.games);
   render();
 }
 
@@ -49,6 +50,7 @@ function togglePlayed(id: number): void {
     ...state,
     games: state.games.map((g) => (g.id === id ? { ...g, played: !g.played } : g)),
   };
+  saveGames(state.games);
   render();
 }
 
@@ -73,6 +75,7 @@ form.addEventListener('submit', (event) => {
     games: [...state.games, { id: newId, title, platform, played: false }],
   };
   form.reset();
+  saveGames(state.games);
   render();
 });
 
