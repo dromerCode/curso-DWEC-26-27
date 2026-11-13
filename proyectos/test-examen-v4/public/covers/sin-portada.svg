@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" role="img" aria-label="Sin portada">
+  <rect width="200" height="300" fill="#e5e7eb"/>
+  <rect x="24" y="24" width="152" height="252" fill="none" stroke="#9ca3af" stroke-width="2"/>
+  <text x="100" y="158" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" fill="#6b7280">Sin portada</text>
+</svg>
