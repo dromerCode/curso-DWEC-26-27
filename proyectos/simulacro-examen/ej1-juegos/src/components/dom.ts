@@ -53,7 +53,7 @@ export function createGameItem(
   game: Game,
   onTogglePlayed: (id: number) => void,
   onDelete: (id: number) => void,
-): HTMLLIElement {
+):HTMLLIElement {
   const item = document.createElement('li');
   const text = document.createElement('span');
   text.textContent = `${game.title} (${game.platform})`;

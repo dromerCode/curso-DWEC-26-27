@@ -47,7 +47,7 @@ function render(): void {
     });
     return item;
   });
-  list.replaceChildren(...item);
+  list.replaceChildren(...items);
 }
 
 searchInput.addEventListener('input', () => {
